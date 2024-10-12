@@ -1,11 +1,19 @@
-const newTaskButton = document.querySelector('.newTask');
-newTaskButton.addEventListener("click", () => {
+let data
+fetch("./puzzles.txt").then(response => response.text()).then(resp => {
+    data = resp;
+});
 
+
+const newTaskButton = document.querySelector('.newTask');
+let count = 0
+newTaskButton.addEventListener("click", () => {
+    getNewTask();
 })
 
-function getNewTask() {
-    // Берем задание с файла pazzles.txt
-    const task = "1-58-2----9--764-52--4--819-19--73-6762-83-9-----61-5---76---3-43--2-5-16--3-89--";
+async function getNewTask() {
+    // Забираем задание из файла
+    const task = await data.split('\n')[count];
+
     // Превращаем строку с заданием в массив для удобства
     const taskArray = task.split("");
 
@@ -13,7 +21,13 @@ function getNewTask() {
     const blocks = document.querySelectorAll(".small_block");
     
     // Ввести в каждую ячейку цифру
-    blocks.forEach((block, index) => {
+    blocks.forEach((block, index=0) => {
         block.textContent = taskArray[index];
     })
+
+    // Счетчик
+    count += 1;
+    if (count >= 16) alert("Это было последнее задание. Обновите страницу");
+    const divCounter = document.querySelector(".counter");
+    divCounter.textContent = `Задание №${count}`
 }
