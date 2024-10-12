@@ -8,7 +8,7 @@
     width: 100vw;
     height: 100vh;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
     background-color: antiquewhite;
 }
@@ -38,7 +38,21 @@
     width: 65px;
     height: 65px;
     border: 1px solid black;
-    background-color: white;
-    
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
+.buttons {
+    display: flex;
+    margin-top: 10px;
+    width: 500px;
+    justify-content: space-around;
+}
+
+
+.newTask,
+.solveTask {
+    height: 50px;
+    width: 200px;
+}
