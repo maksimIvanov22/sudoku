@@ -1,20 +1,37 @@
-// const middle_block = document.querySelectorAll('.middle_block')
+const solveTask = document.querySelector('.solveTask')
+const small_block = document.querySelectorAll('.small_block')
+
+
+
+for(let i = 0; i < small_block.length; i += 1){
+   solveTask.addEventListener('click', () => {
+    const val = small_block[i].innerText
+    console.log(val)
+}) 
+}
+ 
+
+
+
+
+
+
+
+
+
+
 
 const middle_block = '0153426798'
 
 function comparison() {
-  
 const num = ['0','1', '2', '3', '4', '5', '6', '7', '8', '9']
 const newMiddle_block = middle_block.split('').sort((a, b) => a - b)
-console.log(newMiddle_block)
-console.log(num)
-if (num === newMiddle_block){
-    return true
+for(let i = 0; i < newMiddle_block.length; i += 1){
+    if (num[i] !== newMiddle_block[i]){
+    return 'Не решено'
+  }
 }
-else {
-    return false
-}
-// console.log(num)
+return 'Решено'
 }
 console.log(comparison(middle_block))
 

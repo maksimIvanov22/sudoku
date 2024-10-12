@@ -1,6 +1,6 @@
 const newTaskButton = document.querySelector('.newTask');
 newTaskButton.addEventListener("click", () => {
-
+    getNewTask()
 })
 
 function getNewTask() {
