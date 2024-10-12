@@ -8,7 +8,7 @@
     width: 100vw;
     height: 100vh;
     display: flex;
-    flex-direction: column;
+    justify-content: center;
     align-items: center;
 }
 
@@ -38,16 +38,15 @@
     align-items: center;
 }
 
-.buttons {
-    display: flex;
-    margin-top: 10px;
-    width: 500px;
-    justify-content: space-around;
+.input_block {
+width: 13px;
+height: 20px;
+font-size: 24px;
+outline: none;
+border: none;
+caret-color: transparent;
 }
 
-
-.newTask,
-.solveTask {
-    height: 50px;
-    width: 200px;
+input:hover {
+    cursor: pointer;
 }
