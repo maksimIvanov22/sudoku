@@ -1,4 +1,4 @@
-* {
+*{
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
@@ -10,6 +10,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    background-color: antiquewhite;
 }
 
 .main_block {
@@ -18,35 +19,26 @@
     border: 3px solid black;
     display: flex;
     flex-wrap: wrap;
-    border-radius: 8px;
+    border-radius: 5px;
+    background-color: aquamarine;
+
 }
 
 .middle_block {
-    width: 198px;
-    height: 198px;
-    border: 2px solid black;
+    width: 33.33333%;
+    height: 33.333333%;
+    border: 1px solid black;
     display: flex;
     flex-wrap: wrap;
+    background-color: bisque;
+
 }
 
 .small_block {
-    width: 64.6px;
-    height: 64.5px;
+    width: 65px;
+    height: 65px;
     border: 1px solid black;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    background-color: white;
+    
 }
 
-.input_block {
-width: 13px;
-height: 20px;
-font-size: 24px;
-outline: none;
-border: none;
-caret-color: transparent;
-}
-
-input:hover {
-    cursor: pointer;
-}
